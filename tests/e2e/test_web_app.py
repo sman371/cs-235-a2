@@ -60,7 +60,7 @@ def test_index(client):
     # Check that we can retrieve the home page.
     response = client.get('/')
     assert response.status_code == 200
-    assert b'CompSciFlix' in response.data
+    assert b'Compsci 235 Movie Finder' in response.data
 
 
 def test_login_required_to_comment(client):
