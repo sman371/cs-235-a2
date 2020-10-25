@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import ssl
 
 row_names = ['movie_id', 'movie_title']
-with open("Data1000MoviesWithPics.csv", encoding='utf-8-sig') as infile:
+with open("Data1000Movies.csv", encoding='utf-8-sig') as infile:
     reader = csv.reader(infile)
     next(infile)
     for row in reader:

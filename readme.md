@@ -1,4 +1,4 @@
-# COMPSCI235Flix Web Application
+# CompSci 235 Movie Finder Web Application
 
 ## Description
 
@@ -26,6 +26,14 @@ From the *A2_compsci235* directory, and within the activated virtual environment
 ````shell
 $ flask run
 ```` 
+
+If it says Environment: production change environment before running flask
+
+````shell
+$ export FLASK_ENV=development
+$ flask run
+```` 
+
 
 
 ## Configuration

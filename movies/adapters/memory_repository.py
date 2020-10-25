@@ -247,7 +247,7 @@ def read_csv_file(filename: str):
 
 def load_movies_and_tags(data_path: str, repo: MemoryRepository):
     #Rank,Title,Genre,Description,Director,Actors,Year,Runtime (Minutes),Rating,Votes,Revenue (Millions),Metascore
-    for row in read_csv_file(os.path.join(data_path, 'Data1000MoviesWithPics.csv')):
+    for row in read_csv_file(os.path.join(data_path, 'Data1000Movies.csv')):
         movie = Movie(row[1], int(row[6]))
         movie.description = row[3]
         # genres
