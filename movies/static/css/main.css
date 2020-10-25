@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  color: black;
+  color: white;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
@@ -13,13 +13,16 @@
 body,
 html {
   height: 100%;
-  background-color: white;
-  color: yellow;
+  background: #0d002a;
+  color: white;
 }
 
 h1 {
     text-align: center;
     font-weight: bold;
+
+    color: white;
+    text-shadow: 1px 1px 2px white, 0 0 45px #56d2eb, 0 0 25px #135b9c, 0 0 5px #155698;
 }
 
 img {
@@ -45,7 +48,7 @@ img {
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: #bdb8d7;
+  color: white;
   display: block;
 }
 
@@ -67,6 +70,7 @@ img {
 
 .btn-general-disabled {
     background-color: #4b4276;
+    color: white;
     border: none;
     border-radius: 8px;
     display: inline-block;
@@ -85,23 +89,28 @@ img {
     width: 100%;
     overflow: auto;
     word-break: break-all;
+    color: white;
 }
 
 #body {
   min-height: 100%;
   margin-bottom: -60px;
   font-size: medium;
-  background-color: pink;
+  background: #0d002a;
+  color: white;
 }
 
 #header {
   padding: 20px;
-  background-color: blue;
-  color:white;
+  background-color: #0d002a;
   border-bottom: 1px solid #e0e4e8;
   font-size: 64px;
   font-weight: bold;
   text-align: center;
+
+  color: white;
+  text-shadow: 1px 1px 2px white, 0 0 25px #ad4ef0, 0 0 5px #7709ba, 0 0 45px #cea7f8 ;
+
 }
 
 #content-2 {
@@ -109,31 +118,33 @@ img {
   margin-left: 200px;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 #container {
   display: flex;
   flex-direction: row;
+  color: white;
 }
 
 #nav {
   width: 200px;
   height: 100%;
-  background: black;
+  background: #0d002a;
   color:white;
   padding: 30px 0px;
   position: fixed;
 }
 
 #nav-header {
-  color: #fff;
+  color: white;
   text-align: center;
   margin-bottom: 30px;
   margin-top: 12px;
 }
 
 #sub-nav-header {
-  color: #fff;
+  color: white;
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -141,7 +152,7 @@ img {
 }
 
 #nav-footer {
-  color: #fff;
+  color: white;
   margin-top: 25px;
   margin-bottom: 20px;
   position: absolute;
@@ -153,7 +164,7 @@ img {
 
 #main {
   margin: 20px;
-  color: #717171;
+  color: white;
   line-height: 25px;
   padding: 10px;
   width: 66.666667%;
@@ -164,8 +175,8 @@ img {
 }
 
 #sidebar {
-    background-color: red;
-    color: #717171;
+    background-color: black;
+    color: white;
     width: 33.333333%;
     min-height: 100vh;
     height: 100%;
@@ -177,15 +188,18 @@ img {
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 }
 
 #article {
     clear:both;
     margin-bottom:100px;
+    color: white;
 }
 
 #article-footer {
     font-size: 32px;
+    color: white;
 }
 
 #article-container {
@@ -193,6 +207,7 @@ img {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    color: white;
 }
 
 input[type='text'],
