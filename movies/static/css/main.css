@@ -219,6 +219,7 @@ input[type='text'],
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+        color: black;
     }
 
 input[type='password'],
@@ -230,12 +231,13 @@ input[type='password'],
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
+        color: black;
     }
 
 input[type='submit'] {
     width: 100%;
      background-color: #7532cd;
-     color: white;
+     color: black;
      padding: 14px 20px;
      margin: 8px 0;
      border: none;
