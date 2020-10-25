@@ -6,7 +6,7 @@ from movies.adapters import memory_repository
 from movies.adapters.memory_repository import MemoryRepository
 
 
-TEST_DATA_PATH = os.path.join('C:', os.sep, 'Users', '12477', 'Documents', 'git_new', 'A2_compsci235', 'tests', 'data')
+TEST_DATA_PATH = os.path.join('C:', os.sep, 'Users', 'samanthamanansala', 'Documents', 'GitHub', 'cs-235-a2', 'tests', 'data')
 #TEST_DATA_PATH = os.path.join('C:', os.sep, 'Users', 'iwar006', 'Documents', 'Python dev', 'COVID-19', 'tests', 'data')
 
 
