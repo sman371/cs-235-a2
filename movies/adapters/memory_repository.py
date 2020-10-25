@@ -65,23 +65,6 @@ class MemoryRepository(AbstractRepository):
         return movie
 
     def get_movies_by_year(self, target_year: int) -> List[Movie]:
-        # target_movie = Movie(
-        #     release_year=target_year,
-        #     movie_title=None
-        # )
-        # matching_movies = list()
-        #
-        # try:
-        #     index = self.movie_index(target_movie)
-        #     for movie in self._movies[index:None]:
-        #         if movie.year == target_year:
-        #             matching_movies.append(movie)
-        #         else:
-        #             break
-        # except ValueError:
-        #     # No articles for specified date. Simply return an empty list.
-        #     pass
-
         matching_movies = list()
         for movie in self._movies:
             if movie.year == target_year:
@@ -168,52 +151,12 @@ class MemoryRepository(AbstractRepository):
             next_id = movie.id + 1
         return next_id
 
-
-    # def get_date_of_previous_article(self, article: Article):
-    #     previous_date = None
-    #
-    #     try:
-    #         index = self.article_index(article)
-    #         for stored_article in reversed(self._articles[0:index]):
-    #             if stored_article.date < article.date:
-    #                 previous_date = stored_article.date
-    #                 break
-    #     except ValueError:
-    #         # No earlier articles, so return None.
-    #         pass
-    #
-    #     return previous_date
-    #
-    # def get_date_of_next_article(self, article: Article):
-    #     next_date = None
-    #
-    #     try:
-    #         index = self.article_index(article)
-    #         for stored_article in self._articles[index + 1:len(self._articles)]:
-    #             if stored_article.date > article.date:
-    #                 next_date = stored_article.date
-    #                 break
-    #     except ValueError:
-    #         # No subsequent articles, so return None.
-    #         pass
-    #
-    #     return next_date
-
-    # def add_actor(self, actor: Actor):
-    #     self._actors.append(actor)
-    #
     def get_actors(self) -> List[Actor]:
         return self._actors
-    #
-    # def add_genre(self, genre: Genre):
-    #     self._genres.append(genre)
-    #
+
     def get_genres(self) -> List[Genre]:
         return self._genres
-    #
-    # def add_director(self, director: Director):
-    #     self._directors.append(director)
-    #
+
     def get_directors(self) -> List[Director]:
         return self._directors
     #
@@ -269,67 +212,6 @@ def load_movies_and_tags(data_path: str, repo: MemoryRepository):
 
         # Add the movie to the repository.
         repo.add_movie(movie)
-
-# def load_articles_and_tags(data_path: str, repo: MemoryRepository):
-#     tags = dict()
-#
-#     for data_row in read_csv_file(os.path.join(data_path, 'news_articles.csv')):
-#
-#         article_key = int(data_row[0])
-#         number_of_tags = len(data_row) - 6
-#         article_tags = data_row[-number_of_tags:]
-#
-#         # Add any new tags; associate the current article with tags.
-#         for tag in article_tags:
-#             if tag not in tags.keys():
-#                 tags[tag] = list()
-#             tags[tag].append(article_key)
-#         del data_row[-number_of_tags:]
-#
-#         # Create Article object.
-#         article = Article(
-#             date=date.fromisoformat(data_row[1]),
-#             title=data_row[2],
-#             first_para=data_row[3],
-#             hyperlink=data_row[4],
-#             image_hyperlink=data_row[5],
-#             id=article_key
-#         )
-#
-#         # Add the Article to the repository.
-#         repo.add_article(article)
-#
-#     # Create Tag objects, associate them with Articles and add them to the repository.
-#     for tag_name in tags.keys():
-#         tag = Tag(tag_name)
-#         for article_id in tags[tag_name]:
-#             article = repo.get_article(article_id)
-#             make_tag_association(article, tag)
-#         repo.add_tag(tag)
-
-
-# def load_users(data_path: str, repo: MemoryRepository):
-#     users = dict()
-#
-#     for data_row in read_csv_file(os.path.join(data_path, 'users.csv')):
-#         user = User(
-#             username=data_row[1],
-#             password=generate_password_hash(data_row[2])
-#         )
-#         repo.add_user(user)
-#         users[data_row[0]] = user
-#     return users
-
-
-# def load_comments(data_path: str, repo: MemoryRepository, users):
-#     for data_row in read_csv_file(os.path.join(data_path, 'comments.csv')):
-#         comment = make_comment(
-#             comment_text=data_row[3],
-#             user=users[data_row[1]],
-#             article=repo.get_article(int(data_row[2])),
-#             timestamp=datetime.fromisoformat(data_row[4])
-#         )
-#         repo.add_comment(comment)
 
 
 def populate(data_path: str, repo: MemoryRepository):
