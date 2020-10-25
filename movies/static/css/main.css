@@ -53,7 +53,7 @@ img {
 }
 
 .btn-nav:hover {
-  background-color: blue;
+  background-color: #fed50a;
   color: #fff;
 }
 
@@ -81,7 +81,7 @@ img {
 }
 
 .btn-general:hover {
-    background-color: blue;
+    background-color: #fed50a;
     color: black;
 }
 
@@ -246,7 +246,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-    background-color: blue;
+    background-color: #fed50a;
     color: black;
 }
 
