@@ -35,19 +35,6 @@ class Actor:
     def check_if_this_actor_worked_with(self, colleague):
         return colleague in self.__colleagues_list
 
-#
-# class TestActor:
-#
-#     def test_init(self):
-#         actor1 = Actor("Angelina Jolie")
-#         assert repr(actor1) == "<Actor Angelina Jolie>"
-#         actor2 = Actor("")
-#         assert actor2.actor_full_name is None
-#         assert repr(actor2) == "<Actor None>"
-#         actor3 = Actor(42)
-#         assert actor3.actor_full_name is None
-#         assert repr(actor3) == "<Actor None>"
-
 
 
 class Director:
@@ -295,14 +282,6 @@ class Review:
     def __init__(self, user: User, movie: Movie, review_text: str):
         self.__movie = movie
         self.__review_text = review_text
-        # if type(rating) == int or type(rating) == float:
-        #     if rating <= 10 and rating > 0:
-        #         self.__rating = rating
-        #     else:
-        #         self.__rating = None
-        # else:
-        #     self.__rating = None
-
         self.__timestamp = datetime.now()
         self.__user = user
 

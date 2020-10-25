@@ -9,7 +9,7 @@ A Web application that demonstrates use of Python's Flask framework. The applica
 **Installation via requirements.txt**
 
 ```shell
-$ cd A2_compsci235
+$ cd cs-235-a2
 $ py -3 -m venv venv
 $ venv\Scripts\activate
 $ pip install -r requirements.txt
@@ -53,11 +53,13 @@ Testing requires that file *A2_compsci235/tests/conftest.py* be edited to set th
 
 E.g. 
 
-`TEST_DATA_PATH = os.path.join('C:', os.sep, 'Users', '12477', 'Documents', 'git_new', 'A2_compsci235', 'tests', 'data')`
+`TEST_DATA_PATH = os.path.join('C:', os.sep, 'Users', 'samanthamanansala', 'Documents', 'GitHub', 'cs-235-a2', 'tests', 'data')`
 
 assigns TEST_DATA_PATH with the following value (the use of os.path.join and os.sep ensures use of the correct platform path separator):
 
-`C:\Users\12477\Documents\git_new\A2_compsci235\tests\data`
+`C:/Users/samanthamanansala/Documents/GitHub/cs-235-a2/tests/data`
+
+
 
 Run all tests by typing 
 
